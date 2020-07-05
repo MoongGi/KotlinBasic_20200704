@@ -12,6 +12,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        applyBtn.setOnClickListener {
+            // inputEdt 에 입력된 내용을(text 속성의 값) 받아와서
+            // resultTxt 의 내용(text 속성의 값) 으로 반영
+
+            val inputContent = inputEdt.text.toString()
+
+            resultTxt.text = inputContent
+        }
+
         touchBtn.setOnClickListener {
             //터치 버튼이 눌리면 실행
             //
